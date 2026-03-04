@@ -151,7 +151,7 @@ export default function Events() {
       </section>
 
       <footer className="py-8 border-t border-border text-center">
-        <p className="font-serif text-xs text-muted-foreground italic">Crafted with love · Shaadi Planner</p>
+        <p className="font-serif text-xs text-muted-foreground italic">Made with ❤️ by Krishna Bhujade</p>
       </footer>
     </div>
   );

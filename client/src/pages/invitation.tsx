@@ -209,7 +209,7 @@ export default function Invitation() {
           </span>
           <Heart className="w-3 h-3 text-primary fill-primary" />
         </div>
-        <p className="font-serif text-xs text-muted-foreground italic">Crafted with love · Shaadi Planner</p>
+        <p className="font-serif text-xs text-muted-foreground italic">Made with ❤️ by Krishna Bhujade</p>
       </footer>
     </div>
   );

@@ -11,13 +11,13 @@ export const users = pgTable("users", {
 
 export const weddingDetails = pgTable("wedding_details", {
   id: integer("id").primaryKey().default(1),
-  brideName: text("bride_name").notNull().default("Priya"),
-  groomName: text("groom_name").notNull().default("Arjun"),
-  weddingDate: text("wedding_date").notNull().default("2025-12-20"),
-  venue: text("venue").notNull().default("The Grand Palace, Mumbai"),
-  venueAddress: text("venue_address").notNull().default("123 Wedding Lane, Mumbai, Maharashtra"),
+  brideName: text("bride_name").notNull().default("Shreya"),
+  groomName: text("groom_name").notNull().default("Vaibhav"),
+  weddingDate: text("wedding_date").notNull().default("2026-07-11"),
+  venue: text("venue").notNull().default("Mangli Lake Farms"),
+  venueAddress: text("venue_address").notNull().default("Mangli Lake Farms, Wedding Venue"),
   story: text("story").notNull().default("Our love story began under the stars and will be sealed forever with your blessings."),
-  hashtag: text("hashtag").notNull().default("#PriyaWedArjun"),
+  hashtag: text("hashtag").notNull().default("#ShreyaWedVaibhav"),
 });
 
 export const events = pgTable("events", {

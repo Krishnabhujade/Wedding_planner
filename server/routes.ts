@@ -223,5 +223,60 @@ export async function registerRoutes(httpServer: Server, app: Express): Promise<
     }
   });
 
+  // Reset endpoints
+  app.delete("/api/reset/wedding", async (req, res) => {
+    try {
+      await storage.resetWeddingDetails();
+      await storage.upsertWeddingDetails({
+        brideName: "Shreya",
+        groomName: "Vaibhav",
+        weddingDate: "2026-07-11",
+        venue: "Mangli Lake Farms",
+        venueAddress: "Mangli Lake Farms, Wedding Venue",
+        story: "Our love story began at a college festival in Pune, where Vaibhav played guitar on stage and Shreya couldn't take her eyes off him. Years of friendship blossomed into a love that feels like home. Join us as we begin our forever journey together.",
+        hashtag: "#ShreyaWedVaibhav",
+      });
+      res.json({ success: true, message: "Wedding details reset and reseeded" });
+    } catch (e) {
+      res.status(500).json({ error: "Failed to reset wedding details" });
+    }
+  });
+
+  app.delete("/api/reset/events", async (req, res) => {
+    try {
+      await storage.resetEvents();
+      res.json({ success: true, message: "All events reset" });
+    } catch (e) {
+      res.status(500).json({ error: "Failed to reset events" });
+    }
+  });
+
+  app.delete("/api/reset/guests", async (req, res) => {
+    try {
+      await storage.resetGuests();
+      res.json({ success: true, message: "All guests reset" });
+    } catch (e) {
+      res.status(500).json({ error: "Failed to reset guests" });
+    }
+  });
+
+  app.delete("/api/reset/tasks", async (req, res) => {
+    try {
+      await storage.resetTasks();
+      res.json({ success: true, message: "All tasks reset" });
+    } catch (e) {
+      res.status(500).json({ error: "Failed to reset tasks" });
+    }
+  });
+
+  app.delete("/api/reset/budget", async (req, res) => {
+    try {
+      await storage.resetBudgetItems();
+      res.json({ success: true, message: "All budget items reset" });
+    } catch (e) {
+      res.status(500).json({ error: "Failed to reset budget" });
+    }
+  });
+
   return httpServer;
 }

@@ -21,7 +21,7 @@ export function NavBar({ brideName, groomName }: { brideName?: string; groomName
           <Link href="/" className="flex items-center gap-2">
             <Heart className="w-4 h-4 text-primary fill-primary" />
             <span className="font-cinzel text-sm md:text-base font-semibold tracking-widest gold-text">
-              {brideName || "Priya"} & {groomName || "Arjun"}
+              {brideName || "Shreya"} & {groomName || "Vaibhav"}
             </span>
           </Link>
 

@@ -128,11 +128,7 @@ export default function Gallery() {
       )}
 
       <footer className="py-8 border-t border-border text-center">
-        <div className="flex items-center justify-center gap-2">
-          <Heart className="w-3 h-3 text-primary fill-primary" />
-          <p className="font-serif text-xs text-muted-foreground italic">Shaadi Planner</p>
-          <Heart className="w-3 h-3 text-primary fill-primary" />
-        </div>
+        <p className="font-serif text-xs text-muted-foreground italic">Made with ❤️ by Krishna Bhujade</p>
       </footer>
     </div>
   );

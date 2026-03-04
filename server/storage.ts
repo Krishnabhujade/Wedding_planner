@@ -46,6 +46,12 @@ export interface IStorage {
   getGalleryPhotos(): Promise<GalleryPhoto[]>;
   createGalleryPhoto(photo: InsertGalleryPhoto): Promise<GalleryPhoto>;
   deleteGalleryPhoto(id: string): Promise<void>;
+
+  resetWeddingDetails(): Promise<void>;
+  resetEvents(): Promise<void>;
+  resetGuests(): Promise<void>;
+  resetTasks(): Promise<void>;
+  resetBudgetItems(): Promise<void>;
 }
 
 export class DatabaseStorage implements IStorage {
@@ -183,6 +189,26 @@ export class DatabaseStorage implements IStorage {
 
   async deleteGalleryPhoto(id: string): Promise<void> {
     await db.delete(galleryPhotos).where(eq(galleryPhotos.id, id));
+  }
+
+  async resetWeddingDetails(): Promise<void> {
+    await db.delete(weddingDetails);
+  }
+
+  async resetEvents(): Promise<void> {
+    await db.delete(events);
+  }
+
+  async resetGuests(): Promise<void> {
+    await db.delete(guests);
+  }
+
+  async resetTasks(): Promise<void> {
+    await db.delete(tasks);
+  }
+
+  async resetBudgetItems(): Promise<void> {
+    await db.delete(budgetItems);
   }
 }
 
