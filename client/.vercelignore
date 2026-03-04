@@ -1,0 +1,13 @@
+node_modules
+.git
+.gitignore
+server
+shared
+script
+vite.config.ts
+tsconfig.json
+postcss.config.js
+tailwind.config.ts
+drizzle.config.ts
+components.json
+README.md
