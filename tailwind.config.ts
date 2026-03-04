@@ -86,6 +86,7 @@ export default {
         sans: ["var(--font-sans)"],
         serif: ["var(--font-serif)"],
         mono: ["var(--font-mono)"],
+        cinzel: ["'Cinzel'", "serif"],
       },
       keyframes: {
         "accordion-down": {
