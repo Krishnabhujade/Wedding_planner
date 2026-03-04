@@ -1,6 +1,49 @@
+# Dependencies
 node_modules
+package-lock.json
+yarn.lock
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+
+# Build outputs
 dist
+build
+.next
+out
+
+# Development
+.vite
+.vercel
 .DS_Store
 server/public
+
+# Logs
+npm-debug.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+
+# IDE
+.vscode
+.idea
+*.swp
+*.swo
+*~
+.project
+.classpath
+
+# OS
+Thumbs.db
+
+# Cache
+.eslintcache
+.stylelintcache
+.turbo
+
+# Build artifacts
 vite.config.ts.*
 *.tar.gz
